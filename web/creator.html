@@ -18,7 +18,7 @@
         </div>
         <div id="sketchPadContainer" style="visibility: hidden;"></div>
     </div>
-    <script src="js/draw.js"></script>
+    <script src="../common/js/draw.js"></script>
     <script src="js/sketchPad.js"></script>
     
     <script>
@@ -77,7 +77,7 @@
 
             const fileName = data.session + ".json";
             element.setAttribute('download', fileName);
-            
+
             element.style.display = 'none';
             document.body.appendChild(element);
             element.click();
