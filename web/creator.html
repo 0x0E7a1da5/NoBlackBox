@@ -73,9 +73,11 @@
             instructions.innerHTML = "Take your downloaded file and place it alongside the others in the dataset!";
 
             const element = document.createElement('a');
-            element.setAttribute('href', 'data:text/plain;charset=utf-8, ' + encodeURIComponent(JSON.stringify(data)));
+            element.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data)));
 
             const fileName = data.session + ".json";
+            element.setAttribute('download', fileName);
+            
             element.style.display = 'none';
             document.body.appendChild(element);
             element.click();
